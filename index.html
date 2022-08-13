@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <section class="hero is-small">
         <div class="hero-body">
-          <p class="title has-text-centered">
-            Weather Dashboard
-          </p>
+            <p class="title has-text-centered">
+                Weather Dashboard
+            </p>
         </div>
-      </section>
+    </section>
 
     <div class="columns is-mobile">
         <div id="cities" class="box column is-3 cities mt-5 ml-5">
             <div class="search-form">
                 <h1>Search for a City:</h1>
-                <input id="city-search" class="is-full is-rounded" placeholder="Boston, MA"></input>
-                <button id="search" class="button search is-rounded">Search</button>
-            </div>    
+                <input id="city-search" class="input is-large" placeholder="Boston, MA"></input>
+                <button id="search" class="button search">Search</button>
+            </div>
         </div>
 
         <div class="column is-7">
             <div class="current-city box">
-                <h2 id="city"></h2>
+                <h1 id="city"></h1>
+                <img id="icon">
                 <div id="temperature" class="stats">Temp: F</div>
                 <div id="wind" class="stats">Wind:</div>
                 <div id="humidity" class="stats">Humidity: %</div>
                 <div id="uvIndex" class="stats">UV Index:</div>
             </div>
-            <div id="forecast" class="box">
-                <div>
-                    <h3>5-Day Forecast:</h3>
+            <div>
+                <h1>5-Day Forecast:</h1>
+                <div id="forecast" class="box">
                 </div>
             </div>
         </div>
@@ -47,4 +50,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

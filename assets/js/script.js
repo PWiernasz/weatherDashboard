@@ -99,17 +99,14 @@ function displayCity(citySearch) {
             }).then(function(data) {
                 console.log(data);
 
-                var iconMain = document.createElement("img");
                 var iconSource = "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png";
-                iconMain.setAttribute("src", iconSource);
-
                 var temperature = data.current.temp;
                 var windSpeed = data.current.wind_speed;
                 var humidity = data.current.humidity;
                 var uvIndex = data.current.uvi;
 
                 document.getElementById("city").textContent = currentCity + moment().format(' (MM/DD/YY)') + " ";
-                document.getElementById("city").appendChild(iconMain);
+                document.getElementById("icon").setAttribute("src", iconSource);
                 document.getElementById("temperature").textContent = "Temp: " + temperature + " F";
                 document.getElementById("wind").textContent = "Wind: " + windSpeed + " MPH";
                 document.getElementById("humidity").textContent = "Humidity: " + humidity + "%";
